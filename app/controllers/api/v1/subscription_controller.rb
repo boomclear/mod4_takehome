@@ -14,5 +14,9 @@ class Api::V1::SubscriptionController < ApplicationController
     render json: SubscriptionSerializer.new(sub)
   end
 
-  def index; end
+  def index
+    customer = Customer.find_by(email: params[:email])
+    subs = customer.subscriptions
+    render json: SubscriptionSerializer.new(subs)
+  end
 end
