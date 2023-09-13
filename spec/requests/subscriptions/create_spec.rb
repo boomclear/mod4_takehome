@@ -22,14 +22,10 @@ RSpec.describe 'create new subscription' do
 
       json_response = JSON.parse(response.body, symbolize_names: true)
       expect(response).to be_successful
-      expected = { data: { id: nil,
-                           type: 'subscription',
-                           attributes: { subscription_id: '9c0b3083f52affdb5e99655e1b5b1073',
-                                         monthly_fee: 12.99,
-                                         status: 'active',
-                                         frequency: 'monthly',
-                                         tea: 'Oolong',
-                                         customer: 'austin@gmail.com' } } }
+      
+      expect(customer.subscriptions.count).to eq(1)
+      expect(tea.subscriptions.count).to eq(1)
+
       expect(json_response).to have_key(:data)
       expect(json_response[:data]).to have_key(:attributes)
       expect(json_response[:data][:attributes]).to have_key(:subscription_id)
