@@ -8,7 +8,11 @@ class Api::V1::SubscriptionController < ApplicationController
     render json: SubscriptionSerializer.new(sub)
   end
 
-  def cancel; end
+  def cancel
+    sub = Subscription.find_by(subscription_id: params[:subscription_id])
+    sub.update!(status: 0)
+    render json: SubscriptionSerializer.new(sub)
+  end
 
   def index; end
 end
