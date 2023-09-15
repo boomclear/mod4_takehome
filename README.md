@@ -104,3 +104,7 @@ install bundler, bundler can be found at https://bundler.io/
 after installing bundler run command `bundle` in terimal while in the root directory of this project
 
 Go to root directory of this project and run `rails s` to boot up a virtual server that you can make requests to
+
+## Testing
+
+To run tests first go through setup then run `bundle exec rspec` in terminal while in the root directory
