@@ -8,13 +8,16 @@ https://dbdesigner.page.link/rm8imwDVw2Z4D6AK8
 POST /api/v1/subscribe
 This route will create a new subscription for a customer and tea
 Payload Request: 
+```
 {
   "tea_name": "Oolong",
   "email": "austin@gmail.com",
   "monthly_fee": 12.99,
   "frequency": "monthly"
 }
+```
 Payload Response: 
+```
 {
     "data": {
         "id": "2",
@@ -29,14 +32,16 @@ Payload Response:
         }
     }
 }
-
+```
 DELETE /api/v1/subscribe
 This route will cancel a subscription for a customer and tea
 
 Payload Request: 
+```
 {
   "subscription_id": "8232b9c27c401476a1a35bd6a02f0685"
 }
+```
 Payload Response: 
 {
     "data": {
@@ -52,15 +57,18 @@ Payload Response:
         }
     }
 }
-
+```
 POST /api/v1/subscriptions
 This route will give you all the subscriptions a customer currently has
 
 Payload Request: 
+```
 {
   "email": "austin@gmail.com"
 }
+```
 Payload Response:
+```
 {
     "data": [
         {
@@ -77,5 +85,5 @@ Payload Response:
         }
     ]
 }
-
+```
 
