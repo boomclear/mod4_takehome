@@ -88,3 +88,19 @@ Payload Response:
 }
 ```
 
+## Ruby and Rails Version
+
+ruby 3.2.2
+rails 7.0.7
+
+Gems can be found in the Gemfile
+
+## Setup
+
+install ruby 3.2.2 instructions can be found at https://www.ruby-lang.org/en/documentation/installation/
+
+install bundler, bundler can be found at https://bundler.io/
+
+after installing bundler run command `bundle` in terimal while in the root directory of this project
+
+Go to root directory of this project and run `rails s` to boot up a virtual server that you can make requests to
